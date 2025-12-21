@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>बहिणाबाईज् टिफिन सर्व्हिस | घरगुती जेवण</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1546833999-b9f581a1996d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .food-card:hover {
+            transform: translateY(-5px);
+            transition: all 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-orange-50 text-gray-800">
+
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center gap-2">
+                <i class="fas fa-utensils text-orange-600 text-2xl"></i>
+                <h1 class="text-xl md:text-2xl font-bold text-orange-700">बहिणाबाईज् टिफिन</h1>
+            </div>
+            
+            <div class="hidden md:flex space-x-6 font-semibold text-gray-700">
+                <a href="#home" class="hover:text-orange-600 transition">मुख्य पान</a>
+                <a href="#menu" class="hover:text-orange-600 transition">मेनू</a>
+                <a href="#pricing" class="hover:text-orange-600 transition">दरपत्रक</a>
+                <a href="#contact" class="hover:text-orange-600 transition">संपर्क</a>
+            </div>
+
+            <button class="md:hidden text-gray-700 focus:outline-none" onclick="toggleMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <a href="#home" class="block py-2 px-4 hover:bg-orange-50" onclick="toggleMenu()">मुख्य पान</a>
+            <a href="#menu" class="block py-2 px-4 hover:bg-orange-50" onclick="toggleMenu()">मेनू</a>
+            <a href="#pricing" class="block py-2 px-4 hover:bg-orange-50" onclick="toggleMenu()">दरपत्रक</a>
+            <a href="#contact" class="block py-2 px-4 hover:bg-orange-50" onclick="toggleMenu()">संपर्क</a>
+        </div>
+    </nav>
+
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4 pt-16">
+        <div class="text-white max-w-3xl animate-fade-in-up">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4 text-orange-400">आईच्या हाताची चव...</h2>
+            <h3 class="text-2xl md:text-4xl font-semibold mb-6">आता तुमच्या डब्यात!</h3>
+            <p class="text-lg md:text-xl mb-8 opacity-90 italic">"बहिणाबाईंच्या मायेची साठवण, प्रत्येक घासात घरची आठवण!"</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#pricing" class="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-full transition shadow-lg">
+                    ऑर्डर करा
+                </a>
+                <a href="tel:+918879310828" class="bg-white hover:bg-gray-100 text-orange-700 font-bold py-3 px-8 rounded-full transition shadow-lg">
+                    <i class="fas fa-phone-alt mr-2"></i> कॉल करा
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-leaf text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">१००% घरगुती व सात्विक</h3>
+                    <p class="text-gray-600">अस्सल घरगुती चव, उत्तम दर्जाचे साहित्य आणि स्वच्छतेची पूर्ण हमी.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-fire text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">गरम आणि ताजे जेवण</h3>
+                    <p class="text-gray-600">वाफाळलेला भात आणि गरम पोळी थेट तुमच्या दारी.</p>
+                </div>
+                <div class="p-6">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-motorcycle text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">वेळेवर डिलिव्हरी</h3>
+                    <p class="text-gray-600">कल्याण पूर्व आणि डोंबिवली पूर्व परिसरात घरपोच सेवा.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-16 bg-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">🍱 आमचा रोजचा मेनू</h2>
+                <div class="w-24 h-1 bg-orange-500 mx-auto"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow-md food-card">
+                    <div class="text-orange-500 text-3xl mb-4"><i class="fas fa-bread-slice"></i></div>
+                    <h3 class="text-xl font-bold mb-2">पोळी (४ नग)</h3>
+                    <p class="text-gray-600">घरच्या गव्हाची मूर आणि गरम चपाती.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md food-card">
+                    <div class="text-green-500 text-3xl mb-4"><i class="fas fa-carrot"></i></div>
+                    <h3 class="text-xl font-bold mb-2">भाजी</h3>
+                    <p class="text-gray-600">रोज नवनवीन पालेभाजी किंवा कडधान्याची रस्सा भाजी.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md food-card">
+                    <div class="text-yellow-500 text-3xl mb-4"><i class="fas fa-bowl-rice"></i></div>
+                    <h3 class="text-xl font-bold mb-2">वरण - भात</h3>
+                    <p class="text-gray-600">फोडणीचे वरण/आमटी आणि वाफाळलेला इंद्रायणी/कोलम राईस.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow-md food-card">
+                    <div class="text-red-500 text-3xl mb-4"><i class="fas fa-pepper-hot"></i></div>
+                    <h3 class="text-xl font-bold mb-2">चव वाढवण्यासाठी</h3>
+                    <p class="text-gray-600">घरगुती लोणचं, शेंगदाणा चटणी/ठेचा आणि सॅलड.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">💰 परवडणारे दर (Packages)</h2>
+                <p class="text-gray-600">(टीप: जेवणाच्या प्रकारानुसार दर बदलू शकतात)</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="border-2 border-gray-200 rounded-xl p-6 text-center hover:border-orange-500 transition">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">ट्रायल डबा</h3>
+                    <div class="text-4xl font-bold text-orange-600 mb-4">₹ ८०<span class="text-sm text-gray-500 font-normal">/-</span></div>
+                    <ul class="text-gray-600 mb-6 space-y-2 text-sm">
+                        <li>चव चाखण्यासाठी उत्तम</li>
+                        <li>पूर्ण जेवण</li>
+                    </ul>
+                    <a href="https://wa.me/918879310828?text=मला%20ट्रायल%20डबा%20हवा%20आहे" class="block w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900 transition">ऑर्डर करा</a>
+                </div>
+
+                <div class="border-2 border-orange-200 bg-orange-50 rounded-xl p-6 text-center transform scale-105 shadow-xl relative">
+                    <div class="absolute top-0 right-0 bg-orange-600 text-white text-xs px-2 py-1 rounded-bl-lg">Popular</div>
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">एक वेळची थाळी</h3>
+                    <div class="text-4xl font-bold text-orange-600 mb-4">₹ ११०<span class="text-sm text-gray-500 font-normal">/-</span></div>
+                    <ul class="text-gray-600 mb-6 space-y-2 text-sm">
+                        <li>पाहुण्यांसाठी सोय</li>
+                        <li>भरपूर जेवण</li>
+                        <li>स्वीट डिश (उपलब्ध असल्यास)</li>
+                    </ul>
+                    <a href="https://wa.me/918879310828?text=मला%20एक%20थाळी%20हवी%20आहे" class="block w-full bg-orange-600 text-white py-2 rounded-lg hover:bg-orange-700 transition">ऑर्डर करा</a>
+                </div>
+
+                <div class="border-2 border-gray-200 rounded-xl p-6 text-center hover:border-orange-500 transition">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">साप्ताहिक (Weekly)</h3>
+                    <div class="text-3xl font-bold text-orange-600 mb-4">₹ ६६० - ७५०</div>
+                    <ul class="text-gray-600 mb-6 space-y-2 text-sm">
+                        <li>६ दिवसांचे जेवण</li>
+                        <li>रविवार सुट्टी</li>
+                        <li>बचत पॅकेज</li>
+                    </ul>
+                    <a href="https://wa.me/918879310828?text=मला%20साप्ताहिक%20पॅकेजची%20माहिती%20हवी%20आहे" class="block w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900 transition">चौकशी करा</a>
+                </div>
+
+                <div class="border-2 border-gray-200 rounded-xl p-6 text-center hover:border-orange-500 transition">
+                    <h3 class="text-xl font-bold text-gray-700 mb-4">मासिक (Monthly)</h3>
+                    <div class="text-3xl font-bold text-orange-600 mb-4">₹ २७३० - २८५०</div>
+                    <ul class="text-gray-600 mb-6 space-y-2 text-sm">
+                        <li>महिन्याची चिंता मिटली</li>
+                        <li>सर्वात स्वस्त</li>
+                        <li>घरपोच डिलिव्हरी</li>
+                    </ul>
+                    <a href="https://wa.me/918879310828?text=मला%20मासिक%20पॅकेजची%20माहिती%20हवी%20आहे" class="block w-full bg-gray-800 text-white py-2 rounded-lg hover:bg-gray-900 transition">चौकशी करा</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-orange-500">संपर्क साधा</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-phone-alt mt-1 text-orange-400"></i>
+                            <div>
+                                <p class="font-bold">फोन नंबर:</p>
+                                <a href="tel:+918879310828" class="hover:text-orange-300 block">+९१ ८८७९३१०८२८</a>
+                                <a href="tel:+917738446708" class="hover:text-orange-300 block">+९१ ७७३८४४६७०८</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i class="fas fa-map-marker-alt mt-1 text-orange-400"></i>
+                            <div>
+                                <p class="font-bold">सर्विस एरिया (५ किमी मर्यादा):</p>
+                                <p>कल्याण पूर्व / डोंबिवली पूर्व</p>
+                            </div>
+                        </div>
+                        <div class="mt-6 p-4 bg-gray-800 rounded-lg border-l-4 border-orange-500">
+                            <p class="italic">"पोट भरेल, पण मन भरणार नाही... हेच बहिणाबाईंच्या अन्नाचे वैशिष्ट्य!"</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white text-gray-800 p-6 rounded-lg text-center">
+                    <h3 class="text-xl font-bold mb-4">आजच ऑर्डर करा!</h3>
+                    <p class="mb-6">व्हॉट्सॲपवर ऑर्डर देण्यासाठी खालील बटणावर क्लिक करा.</p>
+                    <a href="https://wa.me/918879310828?text=नमस्कार,%20मला%20जेवणाची%20ऑर्डर%20द्यायची%20आहे" class="inline-flex items-center bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-full transition w-full justify-center">
+                        <i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp करा
+                    </a>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400 text-sm">
+                <p>&copy; 2024 बहिणाबाईज् टिफिन सर्व्हिस. सर्व हक्क राखीव.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
